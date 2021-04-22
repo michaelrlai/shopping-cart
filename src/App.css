@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-weight: 100;
 }
 
 nav {
@@ -68,6 +69,17 @@ nav ul li a#cart img {
 }
 
 .about {
-  width: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.about .about-container {
+  width: 600px;
   text-align: center;
+}
+
+.about .about-title {
+  font-weight: 300;
+  font-size: 24px;
+  margin: 10px;
 }

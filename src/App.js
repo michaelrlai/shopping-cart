@@ -26,8 +26,8 @@ const App = () => {
           <li>
             <Link to="/cart" id="cart">
               <img
-                src="https://www.flaticon.com/svg/vstatic/svg/263/263142.svg?token=exp=1619056663~hmac=e5e785867aafb02cfce7d66114827569"
-                alt=""
+                src="https://www.flaticon.com/svg/vstatic/svg/263/263142.svg?token=exp=1619064693~hmac=59565effeeb8bc5ee1c31243bfd909a9"
+                alt="cart"
               />
             </Link>
           </li>
@@ -59,6 +59,7 @@ const Home = () => {
           alt=""
         />
       </div>
+      <div>Shop Jewelry</div>
     </div>
   );
 };
@@ -70,12 +71,15 @@ const Shop = () => {
 const About = () => {
   return (
     <div className="about">
-      <div className="about-title">About Jewelry Co</div>
-      <p className="about-para">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-        consequatur quasi, repellendus, nostrum qui odit ea vero facere totam
-        sunt optio neque natus ex iusto porro accusamus blanditiis inventore ab.
-      </p>
+      <div className="about-container">
+        <div className="about-title">About Jewelry Co</div>
+        <p className="about-para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          consequatur quasi, repellendus, nostrum qui odit ea vero facere totam
+          sunt optio neque natus ex iusto porro accusamus blanditiis inventore
+          ab.
+        </p>
+      </div>
     </div>
   );
 };
