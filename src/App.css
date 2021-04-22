@@ -2,15 +2,20 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
 }
 
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 80px;
   background-color: rgb(250, 253, 255);
+}
+
+nav div#title {
+  position: absolute;
+  color: red;
 }
 
 nav ul {
@@ -20,19 +25,49 @@ nav ul {
 }
 
 nav ul li a {
-  margin: 0 20px;
+  margin: 0 12px;
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+nav ul li a#title {
+  position: absolute;
+  text-decoration: none;
+  top: 18px;
+  left: 20px;
+  font-size: 36px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 nav ul li a#cart {
   position: absolute;
-  text-decoration: none;
-  right: 0;
+  top: 28px;
+  right: 30px;
+}
+
+nav ul li a#cart img {
+  height: 24px;
 }
 
 .home {
-  height: 100vh;
-  background-color: lightcoral;
+  height: 200vh;
+  width: 100vw;
+}
+
+.home .banner {
+  display: flex;
+  width: 100%;
+}
+
+.banner img {
+  width: 50vw;
+  height: 35vw;
+  object-fit: cover;
+}
+
+.about {
+  width: 500px;
+  text-align: center;
 }
