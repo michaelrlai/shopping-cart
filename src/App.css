@@ -11,7 +11,7 @@ nav {
   justify-content: center;
   align-items: center;
   height: 80px;
-  background-color: rgb(250, 253, 255);
+  border-bottom: solid 1px rgb(239, 239, 239);
 }
 
 nav div#title {
@@ -89,15 +89,36 @@ nav ul li a#cart img {
   height: 200vh;
   width: 100vw;
   display: flex;
-  padding-top: 100px;
 }
 
 .shop-container .shop-nav-container {
-  background-color: aqua;
   min-width: 300px;
+  margin-top: 100px;
 }
 
-.shop-container .products-container {
+.shop-container .shop-nav-container li {
+  margin: 10px 50px;
+  list-style-type: none;
+}
+
+.shop-container .shop-container-right {
+  width: 100%;
+}
+
+.shop-container .shop-container-right .shop-container-right-banner img {
+  width: 33%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.shop-container .shop-container-right .products-container-title {
+  font-size: 24px;
+  margin: 30px 0px;
+  border-bottom: solid 1px rgb(239, 239, 239);
+}
+
+.shop-container .shop-container-right .products-container {
+  margin-top: 20px;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, 300px);
@@ -108,7 +129,45 @@ nav ul li a#cart img {
   height: 10px;
 }
 
-.shop-container .products-container div {
-  background-color: bisque;
+.shop-container .shop-container-right .products-container .product-container {
+  height: 350px;
+}
+
+.shop-container
+  .shop-container-right
+  .products-container
+  .product-container
+  .product-image {
+  width: 300px;
   height: 300px;
+  object-fit: cover;
+}
+
+.shop-container
+  .shop-container-right
+  .products-container
+  .product-container
+  .product-caption {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shop-container
+  .shop-container-right
+  .products-container
+  .product-container
+  .product-caption
+  .product-name {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.shop-container
+  .shop-container-right
+  .products-container
+  .product-container
+  .product-caption
+  .product-price {
+  color: rgb(117, 117, 117);
 }

@@ -12,7 +12,6 @@ const Home = () => {
           alt=""
         />
       </div>
-      <div>Shop Jewelry</div>
     </div>
   );
 };
