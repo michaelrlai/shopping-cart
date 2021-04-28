@@ -25,7 +25,7 @@ const products = [
     name: "Solo Diamond Bracelet",
     price: 200,
     src:
-      "https://dto508s2j2p46.cloudfront.net/system/spree/products/19722/large/SoloDiamond_bracelet_yg_hero.jpg?1617904585",
+      "https://dto508s2j2p46.cloudfront.net/system/spree/products/19861/large/SoloDiamond_Bracelet_yg_hero-0030.jpg?1619551678",
   },
   {
     type: "bracelet",

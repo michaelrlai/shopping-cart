@@ -10,6 +10,7 @@ import Home from "./components/Home";
 import Shop from "./components/Shop";
 import About from "./components/About";
 import Cart from "./components/Cart";
+import products from "./components/products";
 
 const App = () => {
   return (
@@ -39,7 +40,7 @@ const App = () => {
       </nav>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/shop" component={Shop} />
+        <Route exact path="/shop" render={() => <Shop products={products} />} />
         <Route exact path="/about" component={About} />
         <Route exact path="/cart" component={Cart} />
       </Switch>

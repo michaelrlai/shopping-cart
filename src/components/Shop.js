@@ -1,7 +1,13 @@
-import products from "./Products";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+} from "react-router-dom";
 
-const Shop = () => {
-  console.log(products);
+const Shop = (props) => {
+  const { products } = props;
   return (
     <div className="shop-container">
       <div className="shop-nav-container">
@@ -31,9 +37,13 @@ const Shop = () => {
         <div className="products-container">
           {products.map((product) => (
             <div className="product-container" key={product.name}>
-              <img className="product-image" src={product.src} alt="" />
+              <Link>
+                <img className="product-image" src={product.src} alt="" />
+              </Link>
               <div className="product-caption">
-                <div className="product-name">{product.name}</div>
+                <Link>
+                  <div className="product-name">{product.name}</div>
+                </Link>
                 <div className="product-price">{`$${product.price}`}</div>
               </div>
             </div>
