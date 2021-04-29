@@ -6,6 +6,15 @@
   font-weight: 100;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 nav {
   display: flex;
   justify-content: center;
@@ -180,4 +189,43 @@ nav ul li a#cart img {
   .product-caption
   .product-price {
   color: rgb(117, 117, 117);
+}
+
+.product-page .container {
+  display: flex;
+  justify-content: center;
+}
+
+.product-page .container .left-container {
+  width: 50vw;
+}
+
+.product-page .container .left-container .image-container img {
+  margin-left: 10vw;
+  width: 80%;
+}
+
+.product-page .container .right-container {
+  width: 50vw;
+  text-align: center;
+}
+
+.product-page .container .right-container .product-name {
+  margin-top: 25vh;
+  font-size: 24px;
+}
+
+.product-page .container .right-container .product-price {
+  margin-top: 20px;
+}
+
+.product-page .container .right-container .add-button-container {
+  margin-top: 40px;
+}
+
+.product-page .container .right-container .add-button {
+  color: white;
+  background-color: black;
+  padding: 15px 80px;
+  text-decoration: none;
 }

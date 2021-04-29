@@ -1,11 +1,4 @@
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
-import Product from "./Product";
+import { Switch, Route, Link } from "react-router-dom";
 
 const Shop = (props) => {
   const { products } = props;
@@ -40,11 +33,11 @@ const Shop = (props) => {
             <div className="products-container">
               {products.map((product) => (
                 <div className="product-container" key={product.name}>
-                  <Link>
+                  <Link to={`/shop/products/${product.url}`}>
                     <img className="product-image" src={product.src} alt="" />
                   </Link>
                   <div className="product-caption">
-                    <Link>
+                    <Link to={`/shop/products/${product.url}`}>
                       <div className="product-name">{product.name}</div>
                     </Link>
                     <div className="product-price">{`$${product.price}`}</div>

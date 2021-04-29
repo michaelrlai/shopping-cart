@@ -1,19 +1,19 @@
 import "./App.css";
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
 import About from "./components/About";
 import Cart from "./components/Cart";
-import products from "./components/products";
 import Product from "./components/Product";
+import products from "./components/products";
 
 const App = () => {
+  const [cart, setCart] = useState([]);
+  const addProduct = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+    console.log("added to cart");
+  };
   return (
     <BrowserRouter>
       <nav>
@@ -50,8 +50,17 @@ const App = () => {
           <About />
         </Route>
         <Route exact path="/cart">
-          <Cart />
+          <Cart cart={cart} />
         </Route>
+        <Route exact path="/shop/products">
+          <Product />
+        </Route>
+
+        {products.map((product) => (
+          <Route path={`/shop/products/${product.url}`} key={product.name}>
+            <Product product={product} addProduct={addProduct} />
+          </Route>
+        ))}
       </Switch>
     </BrowserRouter>
   );

@@ -10,6 +10,7 @@ const products = [
   {
     type: "necklace",
     name: "Double Curb Chain Necklace",
+    url: "doube-curb-chain-necklace",
     price: 95,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/18155/large/DoubleCurbChain_Necklace_v_hero_.jpg?1605987752",
@@ -17,6 +18,7 @@ const products = [
   {
     type: "necklace",
     name: "Pearl Rectangle Locket Necklace",
+    url: "pearl-rectangle-locket-necklace",
     price: 195,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/18975/large/SquareLocket_MOP_necklace_v_hero.jpg?1611249449",
@@ -24,6 +26,7 @@ const products = [
   {
     type: "bracelet",
     name: "Solo Diamond Bracelet",
+    url: "solo-diamond-bracelet",
     price: 200,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/19861/large/SoloDiamond_Bracelet_yg_hero-0030.jpg?1619551678",
@@ -31,6 +34,7 @@ const products = [
   {
     type: "bracelet",
     name: "Diamond Tennis Bracelet",
+    url: "diamond-tennis-bracelet",
     price: 2300,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/17227/large/DiamondTennis_bracelet_yg_hero.jpg?1605805729",
@@ -38,6 +42,7 @@ const products = [
   {
     type: "bracelet",
     name: "Baby Box Chain Bracelet",
+    url: "baby-box-chain-bracelet",
     price: 120,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/16694/large/BabyBoxChain_Bracelet_yg_hero-0079.jpg?1605793778",
@@ -45,6 +50,7 @@ const products = [
   {
     type: "ring",
     name: "Croissant Dome Ring",
+    url: "croissant-dome-ring",
     price: 75,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/18063/large/CroissantDomeVermeil_ring_v_hero.jpg?1605898903",
@@ -52,6 +58,7 @@ const products = [
   {
     type: "ring",
     name: "Dot Ring",
+    url: "dot-ring",
     price: 165,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/16859/large/Dot_ring_yg_hero_0167.jpg?1605794093",
@@ -59,6 +66,7 @@ const products = [
   {
     type: "ring",
     name: "Heirloom Ring",
+    url: "heirloom-ring",
     price: 550,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/16912/large/Heirloom_ring_Garnet_yg_hero.jpg?1605794195",
