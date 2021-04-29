@@ -44,12 +44,12 @@ nav ul li a#title {
 
 nav ul li a#cart {
   position: absolute;
-  top: 28px;
+  top: 22px;
   right: 30px;
 }
 
 nav ul li a#cart img {
-  height: 24px;
+  height: 36px;
 }
 
 .home {

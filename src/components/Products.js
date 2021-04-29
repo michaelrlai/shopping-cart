@@ -2,6 +2,7 @@ const products = [
   {
     type: "necklace",
     name: "Boyfriend Bold Chain Necklace",
+    url: "boyfriend-bold-chain-necklace",
     price: 285,
     src:
       "https://dto508s2j2p46.cloudfront.net/system/spree/products/18111/large/BoyfriendBold_Necklace_yg_Hero-0076.jpg?1605987675",

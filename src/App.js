@@ -11,6 +11,7 @@ import Shop from "./components/Shop";
 import About from "./components/About";
 import Cart from "./components/Cart";
 import products from "./components/products";
+import Product from "./components/Product";
 
 const App = () => {
   return (
@@ -31,7 +32,7 @@ const App = () => {
           <li>
             <Link to="/cart" id="cart">
               <img
-                src="https://www.flaticon.com/svg/vstatic/svg/263/263142.svg?token=exp=1619064693~hmac=59565effeeb8bc5ee1c31243bfd909a9"
+                src="https://i.pinimg.com/originals/15/4f/df/154fdf2f2759676a96e9aed653082276.png"
                 alt="cart"
               />
             </Link>
@@ -39,10 +40,18 @@ const App = () => {
         </ul>
       </nav>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/shop" render={() => <Shop products={products} />} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/cart" component={Cart} />
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/shop">
+          <Shop products={products} />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route exact path="/cart">
+          <Cart />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
