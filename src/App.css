@@ -211,7 +211,7 @@ nav ul li a#cart img {
 }
 
 .product-page .container .right-container .product-name {
-  margin-top: 25vh;
+  margin-top: 20vh;
   font-size: 24px;
 }
 
@@ -228,4 +228,45 @@ nav ul li a#cart img {
   background-color: black;
   padding: 15px 80px;
   text-decoration: none;
+}
+
+.product-page .container .right-container .quantity-outer-container {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.product-page .container .right-container .quantity-inner-container {
+  display: flex;
+  border: solid 1px black;
+}
+
+.product-page .container .right-container .quantity-outer-container #minus,
+.product-page .container .right-container .quantity-outer-container #plus,
+.product-page
+  .container
+  .right-container
+  .quantity-outer-container
+  #quantity-input {
+  width: 24px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-page
+  .container
+  .right-container
+  .quantity-outer-container
+  #quantity-input {
+  background-color: black;
+  color: white;
+  font-size: 12px;
+}
+
+.product-page .container .right-container .quantity-outer-container #minus,
+.product-page .container .right-container .quantity-outer-container #plus {
+  background-color: white;
+  outline: none;
 }

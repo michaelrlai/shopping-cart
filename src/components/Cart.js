@@ -4,8 +4,9 @@ const Cart = (props) => {
     <div>
       {cart.map((product) => (
         <div key={`${product.name}${product.price}`}>
-          <div>{product.name}</div>
-          <div>{product.price}</div>
+          <div>Product: {product.name}</div>
+          <div>Price: {product.price}</div>
+          <div>Quantity: {product.quantity}</div>
         </div>
       ))}
     </div>

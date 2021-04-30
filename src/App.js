@@ -12,7 +12,7 @@ const App = () => {
   const [cart, setCart] = useState([]);
   const addProduct = (product) => {
     setCart((prevCart) => [...prevCart, product]);
-    console.log("added to cart");
+    console.log(cart);
   };
   return (
     <BrowserRouter>
