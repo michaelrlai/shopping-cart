@@ -1,14 +1,30 @@
+import LineItems from "./LineItems";
+import { useEffect, useState } from "react";
+
 const Cart = (props) => {
+  const [subtotal, setSubtotal] = useState(0);
   const { cart } = props;
+
+  useEffect(() => {
+    let tempSubtotal = 0;
+    cart.forEach((item) => {
+      tempSubtotal = tempSubtotal + item.quantity * item.price;
+    });
+    setSubtotal(tempSubtotal);
+  }, [cart]);
+
   return (
     <div>
-      {cart.map((product) => (
-        <div key={`${product.name}${product.price}`}>
-          <div>Product: {product.name}</div>
-          <div>Price: {product.price}</div>
-          <div>Quantity: {product.quantity}</div>
+      <div className="cart-container">
+        <div className="line-items-container">
+          {cart.map((product) => (
+            <LineItems product={product} />
+          ))}
+          <div className="subtotal-container">
+            <div id="subtotal">{`Subtotal: $${subtotal}`}</div>
+          </div>
         </div>
-      ))}
+      </div>
     </div>
   );
 };

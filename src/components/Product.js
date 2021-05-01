@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Product = (props) => {
   const [quantity, setQuantity] = useState(1);
@@ -17,6 +18,7 @@ const Product = (props) => {
 
   const add = () => {
     addProduct(productToAdd);
+    setQuantity(1);
   };
 
   const minusQuantity = () => {
@@ -44,9 +46,9 @@ const Product = (props) => {
           <div className="product-name">{product.name}</div>
           <div className="product-price">{`$${product.price}`}</div>
           <div className="add-button-container">
-            <button className="add-button" onClick={add}>
+            <Link to="/cart" className="add-button" onClick={add}>
               ADD TO CART
-            </button>
+            </Link>
           </div>
           <div className="quantity-outer-container">
             <div className="quantity-inner-container">

@@ -6,13 +6,28 @@ import Shop from "./components/Shop";
 import About from "./components/About";
 import Cart from "./components/Cart";
 import Product from "./components/Product";
-import products from "./components/products";
+import products from "./components/Products";
 
 const App = () => {
   const [cart, setCart] = useState([]);
+
   const addProduct = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
-    console.log(cart);
+    let alreadyCarted = false;
+    let tempCart = [...cart];
+
+    tempCart.forEach((item) => {
+      if (item.name === product.name) {
+        item.quantity += product.quantity;
+        alreadyCarted = true;
+        console.log("hi");
+      }
+    });
+
+    if (alreadyCarted === true) {
+      setCart(tempCart);
+    } else {
+      setCart([...cart, product]);
+    }
   };
   return (
     <BrowserRouter>

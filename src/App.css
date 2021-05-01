@@ -270,3 +270,40 @@ nav ul li a#cart img {
   background-color: white;
   outline: none;
 }
+
+.cart-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.cart-container .line-items-container {
+  width: 50vw;
+}
+
+.line-item {
+  height: 160px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.line-item img {
+  height: 150px;
+  width: 180px;
+  object-fit: cover;
+}
+
+.line-item #product-name {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+.subtotal-container {
+  margin-top: 20px;
+  text-align: end;
+}
+
+.subtotal-container #subtotal {
+  margin-bottom: 100px;
+}
