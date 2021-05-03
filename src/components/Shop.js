@@ -8,11 +8,15 @@ const Shop = (props) => {
     <div className="shop-container">
       <div className="shop-nav-container">
         <ul>
-          <li id="shop-nav-title">Shop /</li>
+          <li id="shop-nav-title">
+            <Link to={`${url}`}>Shop</Link>
+          </li>
           <li>
             <Link to={`${url}/bracelets`}>Bracelets</Link>
           </li>
-          <li>Necklaces</li>
+          <li>
+            <Link to={`${url}/necklaces`}>Necklaces</Link>
+          </li>
           <li>Rings</li>
         </ul>
       </div>
@@ -31,14 +35,17 @@ const Shop = (props) => {
             alt=""
           />
         </div>
-        <div className="products-container-title">Shop All</div>
+
         <Switch>
-          <Route exact path={path}>
+          <Route exact path={`${path}`}>
+            <div className="products-container-title">Shop All</div>
             <ShowProducts products={products} />
           </Route>
           <Route path={`${path}/bracelets`}>
-            <div>HI</div>
             <Bracelets products={products} />
+          </Route>
+          <Route path={`${path}/necklaces`}>
+            <Necklaces products={products} />
           </Route>
         </Switch>
       </div>
@@ -51,7 +58,6 @@ export default Shop;
 const Bracelets = (props) => {
   const { products } = props;
   const [bracelets, setBracelets] = useState([]);
-
   useEffect(() => {
     setBracelets(
       products.filter((product) => {
@@ -61,8 +67,32 @@ const Bracelets = (props) => {
       })
     );
   }, []);
+  return (
+    <div>
+      <div className="products-container-title">Bracelets</div>
+      <ShowProducts products={bracelets} />
+    </div>
+  );
+};
 
-  return <ShowProducts products={bracelets} />;
+const Necklaces = (props) => {
+  const { products } = props;
+  const [necklaces, setNecklaces] = useState([]);
+  useEffect(() => {
+    setNecklaces(
+      products.filter((product) => {
+        if (product.type === "necklace") {
+          return product;
+        }
+      })
+    );
+  }, []);
+  return (
+    <div>
+      <div className="products-container-title">Necklaces</div>
+      <ShowProducts products={necklaces} />
+    </div>
+  );
 };
 
 const ShowProducts = (props) => {
@@ -71,11 +101,11 @@ const ShowProducts = (props) => {
     <div className="products-container">
       {products.map((product) => (
         <div className="product-container" key={product.name}>
-          <Link to={`/shop/products/${product.url}`}>
+          <Link to={`/products/${product.url}`}>
             <img className="product-image" src={product.src} alt="" />
           </Link>
           <div className="product-caption">
-            <Link to={`/shop/products/${product.url}`}>
+            <Link to={`/products/${product.url}`}>
               <div className="product-name">{product.name}</div>
             </Link>
             <div className="product-price">{`$${product.price}`}</div>

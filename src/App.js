@@ -58,21 +58,18 @@ const App = () => {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/shop">
+        <Route path="/shop">
           <Shop products={products} />
         </Route>
-        <Route exact path="/about">
+        <Route path="/about">
           <About />
         </Route>
-        <Route exact path="/cart">
+        <Route path="/cart">
           <Cart cart={cart} />
-        </Route>
-        <Route exact path="/shop/products">
-          <Product />
         </Route>
 
         {products.map((product) => (
-          <Route path={`/shop/products/${product.url}`} key={product.name}>
+          <Route exact path={`/products/${product.url}`} key={product.name}>
             <Product product={product} addProduct={addProduct} />
           </Route>
         ))}
