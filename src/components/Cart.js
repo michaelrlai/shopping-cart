@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const Cart = (props) => {
   const [subtotal, setSubtotal] = useState(0);
-  const { cart } = props;
+  const { cart, removeProduct, changeQuantity } = props;
 
   useEffect(() => {
     let tempSubtotal = 0;
@@ -19,7 +19,12 @@ const Cart = (props) => {
         <div className="line-items-container">
           <div className="shopping-cart-title">Shopping Cart</div>
           {cart.map((product) => (
-            <LineItems product={product} />
+            <LineItems
+              key={`cart-${product.name}`}
+              product={product}
+              removeProduct={removeProduct}
+              changeQuantity={changeQuantity}
+            />
           ))}
           <div className="subtotal-container">
             <div id="subtotal">{`Subtotal: $${subtotal}`}</div>

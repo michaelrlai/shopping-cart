@@ -19,7 +19,6 @@ const App = () => {
       if (item.name === product.name) {
         item.quantity += product.quantity;
         alreadyCarted = true;
-        console.log("hi");
       }
     });
 
@@ -29,6 +28,39 @@ const App = () => {
       setCart([...cart, product]);
     }
   };
+
+  const removeProduct = (product) => {
+    let tempCart = [...cart];
+    setCart(
+      tempCart.filter((item) => {
+        if (item.name !== product.name) {
+          return true;
+        }
+      })
+    );
+  };
+
+  const changeQuantity = {
+    add: (product) => {
+      let tempCart = [...cart];
+      tempCart.forEach((item) => {
+        if (item.name === product.name) {
+          item.quantity += 1;
+        }
+      });
+      setCart(tempCart);
+    },
+    remove: (product) => {
+      let tempCart = [...cart];
+      tempCart.forEach((item) => {
+        if (item.name === product.name && item.quantity > 1) {
+          item.quantity -= 1;
+        }
+      });
+      setCart(tempCart);
+    },
+  };
+
   return (
     <BrowserRouter>
       <nav>
@@ -65,7 +97,11 @@ const App = () => {
           <About />
         </Route>
         <Route path="/cart">
-          <Cart cart={cart} />
+          <Cart
+            cart={cart}
+            removeProduct={removeProduct}
+            changeQuantity={changeQuantity}
+          />
         </Route>
 
         {products.map((product) => (

@@ -67,7 +67,7 @@ const Bracelets = (props) => {
     setBracelets(
       products.filter((product) => {
         if (product.type === "bracelet") {
-          return product;
+          return true;
         }
       })
     );
@@ -87,7 +87,7 @@ const Necklaces = (props) => {
     setNecklaces(
       products.filter((product) => {
         if (product.type === "necklace") {
-          return product;
+          return true;
         }
       })
     );
@@ -107,7 +107,7 @@ const Rings = (props) => {
     setRings(
       products.filter((product) => {
         if (product.type === "ring") {
-          return product;
+          return true;
         }
       })
     );

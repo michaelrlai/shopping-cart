@@ -1,7 +1,27 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const LineItems = (props) => {
-  const { product } = props;
+  const { product, removeProduct, changeQuantity } = props;
+
+  const [productToRemove, setProductToRemove] = useState();
+
+  useEffect(() => {
+    setProductToRemove(product);
+  }, []);
+
+  const add = () => {
+    removeProduct(productToRemove);
+  };
+
+  const plus = () => {
+    changeQuantity.add(product);
+  };
+
+  const minus = () => {
+    changeQuantity.remove(product);
+  };
+
   return (
     <div className="line-item" key={`${product.name}${product.quantity}`}>
       <div className="thumbnail-container">
@@ -18,15 +38,21 @@ const LineItems = (props) => {
             <div id="line-price">{`$${product.price}`}</div>
             <div className="quantity-outer-container">
               <div className="quantity-inner-container">
-                <button id="line-minus">-</button>
+                <button id="line-minus" onClick={minus}>
+                  -
+                </button>
                 <div id="line-quantity-input">{product.quantity}</div>
-                <button id="line-plus">+</button>
+                <button id="line-plus" onClick={plus}>
+                  +
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div className="buttons-container">
-          <button className="delete-button">REMOVE</button>
+          <button className="delete-button" onClick={add}>
+            REMOVE
+          </button>
         </div>
       </div>
     </div>
