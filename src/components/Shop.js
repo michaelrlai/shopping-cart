@@ -17,7 +17,9 @@ const Shop = (props) => {
           <li>
             <Link to={`${url}/necklaces`}>Necklaces</Link>
           </li>
-          <li>Rings</li>
+          <li>
+            <Link to={`${url}/rings`}>Rings</Link>
+          </li>
         </ul>
       </div>
       <div className="shop-container-right">
@@ -46,6 +48,9 @@ const Shop = (props) => {
           </Route>
           <Route path={`${path}/necklaces`}>
             <Necklaces products={products} />
+          </Route>
+          <Route path={`${path}/rings`}>
+            <Rings products={products} />
           </Route>
         </Switch>
       </div>
@@ -91,6 +96,26 @@ const Necklaces = (props) => {
     <div>
       <div className="products-container-title">Necklaces</div>
       <ShowProducts products={necklaces} />
+    </div>
+  );
+};
+
+const Rings = (props) => {
+  const { products } = props;
+  const [rings, setRings] = useState([]);
+  useEffect(() => {
+    setRings(
+      products.filter((product) => {
+        if (product.type === "ring") {
+          return product;
+        }
+      })
+    );
+  }, []);
+  return (
+    <div>
+      <div className="products-container-title">Rings</div>
+      <ShowProducts products={rings} />
     </div>
   );
 };

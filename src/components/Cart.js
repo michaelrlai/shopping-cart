@@ -17,6 +17,7 @@ const Cart = (props) => {
     <div>
       <div className="cart-container">
         <div className="line-items-container">
+          <div className="shopping-cart-title">Shopping Cart</div>
           {cart.map((product) => (
             <LineItems product={product} />
           ))}

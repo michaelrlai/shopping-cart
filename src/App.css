@@ -287,13 +287,24 @@ nav ul li a#cart img {
 }
 
 .cart-container .line-items-container {
-  width: 50vw;
+  width: 70vw;
+}
+
+.cart-container .line-items-container .shopping-cart-title {
+  font-size: 24px;
 }
 
 .line-item {
   height: 160px;
   display: flex;
-  justify-content: space-between;
+  border-top: solid 1px rgb(239, 239, 239);
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.line-item .thumbnail-container {
+  height: 150px;
+  width: 180px;
 }
 
 .line-item img {
@@ -302,10 +313,70 @@ nav ul li a#cart img {
   object-fit: cover;
 }
 
+.line-item .info-container {
+  width: 100%;
+}
+
+.line-item .info-container .top-line {
+  display: flex;
+  justify-content: space-between;
+}
+.line-item .info-container .top-line .price-quantity-container {
+  display: flex;
+}
+
+.line-item .info-container .top-line .price-quantity-container #line-price {
+  padding-right: 100px;
+}
+
 .line-item #product-name {
   text-decoration: none;
   color: black;
   font-weight: 400;
+  padding-left: 50px;
+  min-width: 300px;
+}
+
+.line-item .buttons-container .delete-button {
+  margin-top: 20px;
+  margin-left: 50px;
+  padding: 4px 20px;
+  color: white;
+  background-color: black;
+  font-size: 10px;
+}
+
+.line-item .quantity-outer-container .quantity-inner-container {
+  display: flex;
+  border: solid 1px black;
+}
+
+.line-item .quantity-outer-container .quantity-inner-container #line-minus,
+.line-item .quantity-outer-container .quantity-inner-container #line-plus,
+.line-item
+  .quantity-outer-container
+  .quantity-inner-container
+  #line-quantity-input {
+  width: 24px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line-item .quantity-outer-container .quantity-inner-container #line-minus,
+.line-item .quantity-outer-container .quantity-inner-container #line-plus {
+  background-color: white;
+  color: black;
+}
+
+.line-item
+  .quantity-outer-container
+  .quantity-inner-container
+  #line-quantity-input {
+  background-color: black;
+  color: white;
+  font-size: 12px;
 }
 
 .subtotal-container {
